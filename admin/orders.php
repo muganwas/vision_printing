@@ -159,53 +159,47 @@ $queryString_orders = sprintf("&totalRows_orders=%d%s", $totalRows_orders, $quer
     <tr>
       <td><?php if ($pageNum_orders > 0) { // Show if not first page ?>
         <a href="<?php printf("%s?pageNum_orders=%d%s", $currentPage, 0, $queryString_orders); ?>"><img src="First.gif" /></a>
-        <?php } // Show if not first page ?></td>
+      <?php } // Show if not first page ?></td>
       <td><?php if ($pageNum_orders > 0) { // Show if not first page ?>
         <a href="<?php printf("%s?pageNum_orders=%d%s", $currentPage, max(0, $pageNum_orders - 1), $queryString_orders); ?>"><img src="Previous.gif" /></a>
-        <?php } // Show if not first page ?></td>
+      <?php } // Show if not first page ?></td>
       <td><?php if ($pageNum_orders < $totalPages_orders) { // Show if not last page ?>
         <a href="<?php printf("%s?pageNum_orders=%d%s", $currentPage, min($totalPages_orders, $pageNum_orders + 1), $queryString_orders); ?>"><img src="Next.gif" /></a>
-        <?php } // Show if not last page ?></td>
+      <?php } // Show if not last page ?></td>
       <td><?php if ($pageNum_orders < $totalPages_orders) { // Show if not last page ?>
         <a href="<?php printf("%s?pageNum_orders=%d%s", $currentPage, $totalPages_orders, $queryString_orders); ?>"><img src="Last.gif" /></a>
-        <?php } // Show if not last page ?></td>
+      <?php } // Show if not last page ?></td>
     </tr>
   </table>
   <p>&nbsp;</p>
-  <table border="2" cellpadding="2" cellspacing="2">
-    <tr>
-      <td><strong>id</strong></td>
-      <td><strong>company name</strong></td>
-      <td><strong>email</strong></td>
-      <td><strong>phone</strong></td>
-      <td><strong>Postal Address</strong></td>
-      <td><strong>Physical Address</strong></td>
-      <td><strong>Job Type</strong></td>
-      <td><strong>Final Size</strong></td>
-      <td><strong>Number of Pages</strong></td>
-      <td><strong>Colour Mixture</strong></td>
-      <td><strong>Paper Type Cover</strong></td>
-      <td><strong>Paper Type Text</strong></td>
-      <td><strong>Design</strong></td>
-      <td><strong>Binding Style</strong></td>
-      <td><strong>Number of Leaves (Calender)</strong></td>
-      <td><strong>Detail</strong></td>
+  <table border="1" cellpadding="2" cellspacing="2">
+    <tr class="capitalize">
+      <td height="77" bgcolor="#F3E6E7"><strong>company name</strong></td>
+      <td bgcolor="#F3E6E7"><strong>email</strong></td>
+      <td bgcolor="#F3E6E7"><strong>phone</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Postal Address</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Job Type</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Final Size</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Number of Pages</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Colour Mixture</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Paper Type Cover</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Paper Type Text</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Binding Style</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Number of Leaves (Calender)</strong></td>
+      <td bgcolor="#F3E6E7"><strong>Detail</strong></td>
     </tr>
     <?php do { ?>
     <tr>
-      <td><?php echo $row_orders['id']; ?></td>
       <td><?php echo $row_orders['company name']; ?></td>
       <td><?php echo $row_orders['email']; ?></td>
       <td><?php echo $row_orders['phone']; ?></td>
       <td><?php echo $row_orders['Postal Address']; ?></td>
-      <td><?php echo $row_orders['Physical Address']; ?></td>
       <td><?php echo $row_orders['Job Type']; ?></td>
       <td><?php echo $row_orders['Final Size']; ?></td>
       <td><?php echo $row_orders['Number of Pages']; ?></td>
       <td><?php echo $row_orders['Colour Mixture']; ?></td>
       <td><?php echo $row_orders['Paper Type Cover']; ?></td>
       <td><?php echo $row_orders['Paper Type Text']; ?></td>
-      <td><?php echo $row_orders['Design']; ?></td>
       <td><?php echo $row_orders['Binding Style']; ?></td>
       <td><?php echo $row_orders['Number of Leaves (Calender)']; ?></td>
       <td><?php echo $row_orders['Detail']; ?></td>

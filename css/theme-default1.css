@@ -3279,9 +3279,10 @@ section.add-to-cart-w{
 	font-family: 'Roboto', sans-serif;
 }
 .textareas {
-	width: 90%;
+	width: 100% !important;
 	height:500px;
-	font-size: 16px;
+	color: #313131;
+	font-size: 13px;
 	border: thin solid #CCC;
 	font-family: 'Roboto', sans-serif;	
 }
@@ -6570,6 +6571,17 @@ section.home-slidershow{
 
 }
 @media (min-width: 1200px){
+	.productz_d{
+	
+	position: relative;
+	float: left;
+	width: 25%;
+	height: auto;
+	
+	}
+	.tab_cont{
+	position:absolute;
+	}
 	
 	
 	.aboutz{	
@@ -6635,6 +6647,17 @@ section.home-slidershow{
 	}
 	
 @media (min-width: 769px){
+	.productz_d{
+	
+	position: relative;
+	float: left;
+	width: 25%;
+	height: auto;
+	
+	}
+	.tab_cont{
+	position:absolute;
+	}
 	.tabbz{
 	margin: 5px 10%;
 	border-radius: 10px !important;
@@ -6697,6 +6720,23 @@ section.home-slidershow{
 	}
 	
 @media (max-width: 768px){
+.productz_d{
+	position: relative;
+	float: left;
+	}
+	.tab_cont{
+	position:relative;
+	display: inline-block;
+	height: 100%;
+	overflow: overlay;
+	clear:both;
+	
+	}
+	.bellow{
+		padding: 2px;
+		clear:both;
+		position:absolute;
+		}
 	.tabbz{
 	margin: 5px 10%;
 	border-radius: 10px !important;
@@ -6998,7 +7038,7 @@ section.home-slidershow{
 }
 .text_d{
 	float: left;
-	width: 49.75%;
+	width: 33.3%;
 	position: relative;
 	}
 .sub_button{
@@ -7016,14 +7056,15 @@ section.home-slidershow{
 	border-collapse: separate;
 	 
 	}
-	.roundu{
+.roundu{
 		padding: 5px;
 		margin: 2px;
 		background-color: #00AEEF;
 		border: 1px solid #00AEEF;
 		border-radius: 4px;
 		
-		}
+	}
+
 ::-webkit-input-placeholder {
     color: #313131;
     opacity: 1 !important; /* for older chrome versions. may no longer apply. */

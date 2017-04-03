@@ -37,7 +37,7 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 if (((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) or ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form2"))) {
-  $insertSQL = sprintf("INSERT INTO orders (id, `company name`, email, phone, `Postal Address`, `Job Type`, `Final Size`, `Number of Pages`, `Colour Mixture`, `Paper Type Cover`, `Paper Type Text`, Design, `Binding Style`, `Number of Leaves (Calender)`) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+  $insertSQL = sprintf("INSERT INTO orders (id, `company name`, email, phone, `Postal Address`, `Job Type`, `Final Size`, `Number of Pages`, `Colour Mixture`, `Paper Type Cover`, `Paper Type Text`, `Binding Style`, `Number of Leaves (Calender)`, Detail) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
                        GetSQLValueString($_POST['id'], "int"),
                        GetSQLValueString($_POST['company_name'], "text"),
                        GetSQLValueString($_POST['email'], "text"),
@@ -49,9 +49,9 @@ if (((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) or ((isse
                        GetSQLValueString($_POST['Colour_Mixture'], "text"),
                        GetSQLValueString($_POST['Paper_Type_Cover'], "text"),
                        GetSQLValueString($_POST['Paper_Type_Text'], "text"),
-                       GetSQLValueString($_POST['Design'], "text"),
                        GetSQLValueString($_POST['Binding_Style'], "text"),
-                       GetSQLValueString($_POST['Number_of_Leaves_Calender'], "int"));
+                       GetSQLValueString($_POST['Number_of_Leaves_Calender'], "int"),
+					   GetSQLValueString($_POST['Detail'], "text"));
 
   mysql_select_db($database_local, $local);
   $Result1 = mysql_query($insertSQL, $local) or die(mysql_error());
@@ -59,8 +59,21 @@ if (((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) or ((isse
    $insertGoTo = "#";
   if (isset($_SERVER['QUERY_STRING'])) {
     $insertGoTo .= (strpos($insertGoTo, '?')) ? "&" : "?";
-    $insertGoTo .= $_SERVER['QUERY_STRING'];
+    $insertGoTo .= $_SERVER['QUERY_STRING']; 
  	$msg = "success";
+	$reciever = "print@newvision.co.ug, badpunter256@gmail.com";
+	$to = $reciever; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $subject = "PRINTING ORDER";
+    $message =        "Compay Name: " . $_POST['company_name'] . "\n".
+					  "Email Address: " . $_POST['email'] . "\n".
+                      "Phone Number: " . $_POST['phone'] . "\n".
+					  "Number of Pages: " . $_POST['Number_of_Pages'] . "\n". 
+                      "Paper Type For Pages: " . $_POST['Paper_Type_Text'] . "\n".
+                      "Detail: " . $_POST['Detail'];			   
+    $headers = "From:" . $from;
+    $headers2 = "To:" . $to;
+    mail($to,$subject,$message,$headers);
   }else{
 	  $msg = "failure";
 	  }
@@ -117,6 +130,18 @@ $query_paper_type = "SELECT paper_name FROM printing_paper";
 $paper_type = mysql_query($query_paper_type, $local) or die(mysql_error());
 $row_paper_type = mysql_fetch_assoc($paper_type);
 $totalRows_paper_type = mysql_num_rows($paper_type);
+
+if(isset($_POST['password']))
+{
+$to = "GMukiibi@newvision.co.ug, SKaali@newvision.co.ug, dsemukasa@newvision.co.ug"; // this is your Email address
+$from = $_POST['email']; // this is the sender's Email address
+$subject = "Inquiry";
+$message = "Phone Number:". $_POST['phone'] ." \n" . "Message: " . $_POST['contact_message'] . "\n From: " .$_POST['name'] ;
+
+    $headers = "From:" . $from;
+    $headers2 = "To:" . $to;
+    mail($to,$subject,$message,$headers);
+}
 ?>
 <!doctype html>
 <html>
@@ -128,7 +153,7 @@ $totalRows_paper_type = mysql_num_rows($paper_type);
 <body>
 <div role="tabpanel">
   <ul id="contact_d_p" class="nav nav-tabs" role="tablist">
-    <li id="contact_d_p" class="active"><a href="#home1" data-toggle="tab" role="tab">Quote</a></li>
+    <li id="contact_d_p" class="active"><a href="#home1" data-toggle="tab" role="tab">Get A Quote</a></li>
     <li id="contact_d_p"><a href="#paneTwo1" data-toggle="tab" role="tab">Inquiry</a></li>
   </ul>
   <div id="tabContent1" class="tab-content">
@@ -146,12 +171,27 @@ $totalRows_paper_type = mysql_num_rows($paper_type);
           </tr>
           <tr valign="baseline">
             <td colspan="3" align="left" valign="top" nowrap  class="column_words">
-              <div class="text_d"><input placeholder="Company Name*" name="company_name" type="text" class="textfields" required></div><div class="text_d">&nbsp;<input placeholder="Enter Your Email*" name="email" type="email" class="textfields" value="" required /></div>        
+              <div class="text_d"><input placeholder="Company Name*" name="company_name" type="text" class="textfields" required></div><div class="text_d"><input placeholder="Enter Your Email*" name="email" type="email" class="textfields" value="" required /></div> 
+              <div class="text_d"><input placeholder="Enter Your Phone Number*" name="phone" type="number" class="textfields" value=""  required></div>       
               </td>
             </tr>
           <tr>
             <td width="33%" align="left" valign="top" nowrap class="column_words">
-  <input placeholder="Enter Your Phone Number*" name="phone" type="number" class="textfields" value="" size="32" required>
+  <select name="Paper_Type_Cover" required class="textfields" selected>
+                <option  label="-Select Paper Type For Cover-" value=" ">-Select Paper Type For Cover-</option>
+                  <?php
+do {  
+?>
+                  <option value="<?php echo $row_paper_type['paper_name']?>"><?php echo $row_paper_type['paper_name']?></option>
+                <?php
+} while ($row_paper_type = mysql_fetch_assoc($paper_type));
+  $rows = mysql_num_rows($paper_type);
+  if($rows > 0) {
+      mysql_data_seek($paper_type, 0);
+	  $row_paper_type = mysql_fetch_assoc($paper_type);
+  }
+?>
+              </select>
             </td>
             <td width="32%" align="left" valign="top" nowrap class="column_words"><input name="Postal_Address" type="text" required="required" class="textfields" placeholder="Enter Address" value="" /></td>
             <td width="33%" align="left" valign="top" class="column_fields">
@@ -207,30 +247,16 @@ do {
                 <option value="lamination" <?php if (!(strcmp("lamination", ""))) {echo "SELECTED";} ?>>Lamination</option>
               </select>
             </td>
-            <td align="left" valign="top" nowrap class="column_words"><input placeholder="Enter Number of Leaves(Calender)" name="Number_of_Leaves_Calender" type="text" class="textfields" value="" /></td>
+            <td align="left" valign="top" nowrap class="column_words"><input placeholder="Enter Number of Leaves(Calender)" name="Number_of_Leaves_Calender" type="number" class="textfields" value="" /></td>
             <td align="left" valign="top" class="column_fields">
                 <input placeholder="Enter Number of Pages*" name="Number_of_Pages" type="number" class="textfields" value="" size="32" required />
             </td>
           </tr>
           <tr valign="baseline">
-            <td align="left" valign="top" nowrap class="column_words">
-              <select name="Paper_Type_Cover" required class="textfields" selected>
-                <option  label="-Select Paper Type For Cover-" value=" ">-Select Paper Type For Cover-</option>
-                  <?php
-do {  
-?>
-                  <option value="<?php echo $row_paper_type['paper_name']?>"><?php echo $row_paper_type['paper_name']?></option>
-                <?php
-} while ($row_paper_type = mysql_fetch_assoc($paper_type));
-  $rows = mysql_num_rows($paper_type);
-  if($rows > 0) {
-      mysql_data_seek($paper_type, 0);
-	  $row_paper_type = mysql_fetch_assoc($paper_type);
-  }
-?>
-              </select>
+            <td colspan="2" align="left" valign="top" nowrap class="column_words"><textarea class="textareas" placeholder="Enter More Detail*" name="Detail" id="" required></textarea>
+              
             </td>
-            <td colspan="2" align="left" valign="top" nowrap class="column_words">&nbsp;</td>
+            <td align="left" valign="top" nowrap class="column_words">&nbsp;</td>
             </tr>
           <tr valign="baseline">
             <td align="left" valign="top" nowrap><input type="submit" class="sub_button" value="Request Quotation"></td>
@@ -386,6 +412,12 @@ do {
             </p></td>
           </tr>
           <tr valign="baseline">
+            <td class="column_fields"><p>Job Details</p>
+              <p>
+                <textarea class="textareas" placeholder="Enter More Information*" name="textarea" id="textarea" required></textarea>
+              </p></td>
+          </tr>
+          <tr valign="baseline">
             <td class="column_fields"><input type="submit" class="sub_button" value="Request Quotation"></td>
           </tr>
         </table>
@@ -404,15 +436,15 @@ do {
               <p>&nbsp;</p>
             </div>
            
-			  <form id="contact-form" class="form-validate form-horizontal" method="post" action="#">
+			  <form name="form3" id="contact-form" class="form-validate form-horizontal" method="post" action="<?php echo $editFormAction; ?>">
 				
 				
 				<div class="col-md-3 col-sm-3 col-xs-12">
-				  <input class="textfields" type="text" placeholder="Enter Your Name*" required>
+				  <input name="name" class="textfields" type="text" placeholder="Enter Your Name*" required>
 				  
-				  <input class="textfields" type="text" placeholder="Enter Your Email*" required>
+				  <input name="email" class="textfields" type="text" placeholder="Enter Your Email*" required>
 				  
-				  <input class="textfields" type="text" placeholder="Enter Phone Number*" required>
+				  <input name="phone" class="textfields" type="text" placeholder="Enter Phone Number*" required>
 				  
 				  
 				</div>
