@@ -14,16 +14,29 @@
   </ul>
   <div id="tabContent1" class="tab-content">
     <div class="tab-pane fade in active" id="home">
-      <p><img src="images/products and services/news papers.fw.png" class="img-responsive" alt="Placeholder image"></p>
+      <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/news papers1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/news papers2.png" alt="All products"/></div>
+    </div>
     </div>
     <div class="tab-pane fade" id="paneTwo1">
-      <p><img src="images/products and services/calenders.fw.png" class="img-responsive" alt="Placeholder image"></p>
+      <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/calenders1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/calenders2.png" alt="All products"/></div>
     </div>
-    <div class="tab-pane fade" id="paneThree1"><img src="images/products and services/posters tickets and fliers.fw.png" class="img-responsive" alt="Placeholder image">    </div>
+    </div>
+    <div class="tab-pane fade" id="paneThree1">  <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/posters tickets and fliers1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/posters tickets and fliers2.png" alt="All products"/></div>
+    </div>
+   </div>
     <div class="tab-pane fade" id="paneFour1">
-      <p><img src="images/products and services/novels and brochures.fw.png" class="img-responsive" alt="Placeholder image"></p>
+      <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/novels and brochures1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/novels and brochures2.png" alt="All products"/></div>
     </div>
-  </div>
+   </div>
+</div>
 </div>
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <!-- <script src="js/bootstrap.js" type="text/javascript"></script> -->

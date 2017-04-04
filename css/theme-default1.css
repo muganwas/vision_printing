@@ -6571,11 +6571,17 @@ section.home-slidershow{
 
 }
 @media (min-width: 1200px){
-	.productz_d{
-	
+   .productz_d{
 	position: relative;
 	float: left;
 	width: 25%;
+	height: auto;
+	
+	}
+	 .productz_d2{
+	position: relative;
+	float: left;
+	width: 50%;
 	height: auto;
 	
 	}
@@ -6648,10 +6654,15 @@ section.home-slidershow{
 	
 @media (min-width: 769px){
 	.productz_d{
-	
 	position: relative;
 	float: left;
 	width: 25%;
+	height: auto;	
+	}
+	 .productz_d2{
+	position: relative;
+	float: left;
+	width: 50%;
 	height: auto;
 	
 	}
@@ -6720,15 +6731,20 @@ section.home-slidershow{
 	}
 	
 @media (max-width: 768px){
-.productz_d{
-	position: relative;
-	float: left;
+ .productz_d{
+	         position: relative;
+	         float: left;
+            }
+ .productz_d2{
+			 position: relative;
+	         float: left;
+	
 	}
-	.tab_cont{
-	position:relative;
-	display: inline-block;
-	height: 100%;
-	overflow: overlay;
+.tab_cont{
+	width: 100%;
+	padding: 1px;
+	display:table;
+	position: relative;
 	clear:both;
 	
 	}

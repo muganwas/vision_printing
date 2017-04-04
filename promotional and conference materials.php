@@ -12,7 +12,10 @@
   </ul>
   <div id="tabContent1" class="tab-content">
     <div class="tab-pane fade in active" id="home3">
-      <p><img src="images/products and services/promotional and conference materials.fw.png" class="img-responsive" alt="Placeholder image"></p>
+      <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/promotional and conference materials1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/promotional and conference materials2.png" alt="All products"/></div>
+    </div>
     </div>    
   </div>
 </div>

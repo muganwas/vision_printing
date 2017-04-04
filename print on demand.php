@@ -12,10 +12,16 @@
   </ul>
   <div id="tabContent1" class="tab-content">
     <div class="tab-pane fade in active" id="home5">
-      <p><img src="images/products and services/cards certs and wobbler tags.fw.png" class="img-responsive" alt="Placeholder image"></p>
+      <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/cards certs and wobbler tags1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/cards certs and wobbler tags2.png" alt="All products"/></div>
+    </div>
     </div>
     <div class="tab-pane fade" id="paneTwo5">
-      <p><img src="images/products and services/answer sheets registers and exams.fw.png" class="img-responsive" alt="Placeholder image"></p>
+     <div class="tab_cont">
+        <div class="productz_d2"><img src="images/products and services/answer sheets registers and exams1.png" alt="All products"/></div>
+      <div class="productz_d2"><img src="images/products and services/answer sheets registers and exams2.png" alt="All products"/></div>
+    </div>
     </div>
     
   </div>

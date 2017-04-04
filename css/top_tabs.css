@@ -41,7 +41,7 @@ div.tab button.active {
     border: 1px 0px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 330px;
+   
 	
 }
 .tabcontent1 {
@@ -50,7 +50,7 @@ div.tab button.active {
     border: 1px 0px solid #ccc;
     width: 70%;
     border-left: none;
-    height: 330px;
+    
 	display:none;
 	
 }

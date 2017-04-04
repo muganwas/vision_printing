@@ -22,7 +22,6 @@
             <!--Main category : Begin-->
  <main id="main category">
 <section class="home-category">
-            <style type="text/css"></style>
             <script>
   var googletag = googletag || {};
   googletag.cmd = googletag.cmd || [];
