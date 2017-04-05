@@ -17,7 +17,7 @@
 </script>
 
 	<meta charset="utf-8">
-	<title>Our Facilities</title>
+	<title>Our Facilities : The Best Printers In Uganda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
 	<meta name="description" content="Printing template">
 	<meta name="author" content="Netbase">
@@ -59,7 +59,7 @@ pages
 							</div>
 							
 					  </li>
-						<li class="slide1" data-transition="random" ><img src="images/slider/home/gossmagnum.png" alt="" />
+						<li class="slide1" data-transition="random" ><img src="images/slider/home/gossmagnum.png" alt="Largest Printer in Uganda" />
 							<div class="tp-caption lfr" data-x="right"  data-hoffset="-18" data-y="170" data-start="800" data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Goss Magnum</span> Machine</span></div> 
 							<div class="tp-caption lfb" data-x="right"  data-hoffset="-15" data-y="225" data-start="800" data-speed="2000" data-endspeed="300"
 							>
@@ -101,7 +101,7 @@ optimum output from this set up.
 							</div>
 							 
 						</li>
-                         <li class="slide1" data-transition="random" ><img src="images/slider/home/ryobi920.png" alt="" />
+                         <li class="slide1" data-transition="random" ><img src="images/slider/home/ryobi920.png" alt="The Best Printers In Uganda" />
 							<div class="tp-caption lfr" data-x="right"  data-hoffset="-18" data-y="250" data-start="800" data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Ryobi 920</span>Machine</span></div> 
 							<div class="tp-caption lfb" data-x="right"  data-hoffset="-15" data-y="300" data-start="800" data-speed="2000" data-endspeed="300"
 							>

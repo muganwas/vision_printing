@@ -33,7 +33,7 @@
 				<div class="vt-slideshow">
 					<ul>
                     
-                    <li class="slide1" data-transition="random" ><img src="images/slider/home/bg_slider_4.jpg" alt=""/>
+                    <li class="slide1" data-transition="random" ><img src="images/slider/home/bg_slider_4.jpg" alt="Printing In Uganda"/>
 							<div class="tp-caption lfr" data-x="right"  data-hoffset="-80" data-y="170" data-start="800" data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Bringing Print to Life</span></span></div> 
 							<div class="tp-caption lfb" data-x="right"  data-hoffset="-15" data-y="225" data-start="800" data-speed="2000" data-endspeed="300"
 							>
@@ -48,7 +48,7 @@
 							</div>
 							
 					  </li>
-                    <li class="slide1" data-transition="random" ><img src="images/slider/home/bg_slider_0.jpg" alt="" />
+                    <li class="slide1" data-transition="random" ><img src="images/slider/home/bg_slider_0.jpg" alt="Printing In East Africa" />
 							<div class="tp-caption lfr" data-x="right"  data-hoffset="-136" data-y="170" data-start="800" data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Our Promise</span> & Goal</span></div> 
 							<div class="tp-caption lfb" data-x="right"  data-hoffset="-15" data-y="225" data-start="800" data-speed="2000" data-endspeed="300"
 							>
@@ -108,9 +108,9 @@
               <p class="aboutz">Vision printing has been in the commercial printing business for 30years and offers a wide range of printing solutions that include security printing, digital printing services, offset printing for both sheet fed and web as well as finishing.</p>
               <div class="row">
                 <div class="aboutus_d">
-                  <div class="in_d"><img src="images/icons/competitive_pricing.fw.png"><div class="about_text">Competitive Pricing </div></div>
-                  <div class="in_d"><img src="images/icons/quality_printing.fw.png"><div class="about_text">Impeccable Quality </div></div>
-                  <div class="in_d"><img src="images/icons/fast_delivery.fw.png"><div class="about_textr">Fast Delivery<br/><br/></div></div>
+                  <div class="in_d"><img src="images/icons/competitive_pricing.fw.png" alt="The Best Prices In Uganda"><div class="about_text">Competitive Pricing </div></div>
+                  <div class="in_d"><img src="images/icons/quality_printing.fw.png" alt="The Best Quality In Uganda"><div class="about_text">Impeccable Quality </div></div>
+                  <div class="in_d"><img src="images/icons/fast_delivery.fw.png" alt="Unbeatable Delivery Time"><div class="about_textr">Fast Delivery<br/><br/></div></div>
                   
                 </div>
                 <div class="catalog"><a href="images/NVPProfile 2016 mail.pdf">Download  Our Catalogue</a></div>
