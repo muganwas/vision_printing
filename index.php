@@ -17,7 +17,7 @@
 </script>
 
 	<meta charset="utf-8">
-	<title>Home</title>
+	<title>Vision Printing Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes"/>
 	<meta name="description" content="Printing template">
 	<meta name="author" content="Netbase">
