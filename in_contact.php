@@ -131,8 +131,9 @@ $paper_type = mysql_query($query_paper_type, $local) or die(mysql_error());
 $row_paper_type = mysql_fetch_assoc($paper_type);
 $totalRows_paper_type = mysql_num_rows($paper_type);
 
-if(isset($_POST['password']))
+if(isset($_POST['MM_insert1']))
 {
+$msg1 = "success";
 $to = "GMukiibi@newvision.co.ug, SKaali@newvision.co.ug, dsemukasa@newvision.co.ug"; // this is your Email address
 $from = $_POST['email']; // this is the sender's Email address
 $subject = "Inquiry";
@@ -142,6 +143,7 @@ $message = "Phone Number:". $_POST['phone'] ." \n" . "Message: " . $_POST['conta
     $headers2 = "To:" . $to;
     mail($to,$subject,$message,$headers);
 }
+
 ?>
 <!doctype html>
 <html>
@@ -427,13 +429,14 @@ do {
       </div>      
     </div>
     </div>
-    <div class="tab-pane fade" id="paneTwo1">
+    <div class="tab-pane fade in" id="paneTwo1">
    <section id="pr-contact" class="pr-main fab_form">
         
 		  
 			<div class="container">
             <div class="quote">
-              <p>&nbsp;</p>
+             <?php 
+            if($msg1 == "success"){ echo'<div class ="success">Your Inquiry was sent successfully, We will get back to you within 48 hours </div>';} ?>
             </div>
            
 			  <form name="form3" id="contact-form" class="form-validate form-horizontal" method="post" action="<?php echo $editFormAction; ?>">
@@ -453,6 +456,7 @@ do {
 			    <div class="button"></div>
 				  <button type="submit" class="sub_button">Submit</button>
 				</div>
+                <input type="hidden" name="MM_insert1" value="form1">
 			  </form>
 		  </div>
 		</section>   

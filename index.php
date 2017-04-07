@@ -63,7 +63,7 @@
 							</div>
 							
 					  </li>
-						<li class="slide1" data-transition="random" ><img src="images/slider/home/bg_slider_1.jpg" alt="" />
+						<li class="slide1" data-transition="random" ><img src="images/slider/home/bg_slider_1.jpg" alt="State of the art equipment" />
 							<div class="tp-caption lfr" data-x="left"  data-hoffset="" data-y="170" data-start="800" data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Best Quality</span> Machinery</span></div> 
 							<div class="tp-caption lfb" data-x="left"  data-hoffset="" data-y="225" data-start="800" data-speed="2000" data-endspeed="300"
 							>
@@ -77,7 +77,7 @@
 							</div>
 							
 						</li>
-						<li class="slide2" data-transition="random" ><img src="images/slider/home/bg_slider_2.jpg" alt="" />
+						<li class="slide2" data-transition="random" ><img src="images/slider/home/bg_slider_2.jpg" alt="Top Notch quality design" />
 							<div class="tp-caption lfr" data-x="left"  data-hoffset="" data-y="170" data-start="800" data-speed="2000" data-endspeed="300"><span class="style1"><span class="textcolor">Quality Graphic</span> & Design</span></div> 
 							<div class="tp-caption lfb" data-x="left"  data-hoffset="" data-y="225" data-start="800" data-speed="2000" data-endspeed="300">
 								<span class="style2">
