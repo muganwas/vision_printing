@@ -436,7 +436,8 @@ do {
 			<div class="container">
             <div class="quote">
              <?php 
-            if($msg1 == "success"){ echo'<div class ="success">Your Inquiry was sent successfully, We will get back to you within 48 hours </div>';} ?>
+            if($msg1 == "success"){ echo'<div class ="success">Your Inquiry was sent successfully, We will get back to you within 48 hours </div>';} 
+			else{ echo '<div class ="success">Something went wrong, try sending the message again </div>'; ?>
             </div>
            
 			  <form name="form3" id="contact-form" class="form-validate form-horizontal" method="post" action="<?php echo $editFormAction; ?>">
